@@ -6,7 +6,23 @@ class Home extends StatefulWidget {
   _HomeState createState() => _HomeState();
 }
 class _HomeState extends State<Home> {
-  // TODO: Add state variables and functions
+  // 7
+  int _selectedIndex = 0;
+  // 8
+  static List<Widget> pages = <Widget>[
+    // TODO: Replace with Card1
+    Container(color: Colors.red),
+    // TODO: Replace with Card2
+    Container(color: Colors.green),
+    // TODO: Replace with Card3
+    Container(color: Colors.blue)
+  ];
+  // 9
+  void _onItemTapped(int index) {
+    setState(() {
+      _selectedIndex = index;
+    });
+  }
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -18,17 +34,16 @@ class _HomeState extends State<Home> {
         ),
         centerTitle: true,
       ),
-      // TODO: Show selected tab
-      body: Center(
-          child: Text('Let\'s get cooking ! ',
-              // 3
-              style: Theme.of(context).textTheme.headline1)),
+      body: pages[_selectedIndex],
       // 4
       bottomNavigationBar: BottomNavigationBar(
         // 5
         selectedItemColor:
         Theme.of(context).textSelectionTheme.selectionColor,
-        // TODO: Set selected tab bar
+        // 10
+        currentIndex: _selectedIndex,
+        // 11
+        onTap: _onItemTapped,
         // 6
         items: <BottomNavigationBarItem>[
           const BottomNavigationBarItem(

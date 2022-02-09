@@ -67,16 +67,9 @@ class Card1 extends StatelessWidget {
                   fit: BoxFit.cover,
                 ),
                 // 7
-                borderRadius: BorderRadius.all(Radius.circular(14.0)),
+                borderRadius: BorderRadius.all(Radius.circular(16.0)),
                 ),
           ),
-
-
-
-
-
-
-
     );
   }
 }

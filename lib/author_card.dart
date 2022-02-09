@@ -47,7 +47,16 @@ class AuthorCard extends StatelessWidget {
           ],
           ),
           // TODO 2: add IconButton
-
+          IconButton(
+            onPressed: (){
+              const snackBar = SnackBar(content: Text(
+                  'Added to favourites!'));
+              ScaffoldMessenger.of(context).showSnackBar(snackBar);
+            },
+            icon: const Icon(Icons.favorite_border),
+            iconSize: 30,
+            color: Colors.grey[400],
+          ),
     ],
     ),
     );

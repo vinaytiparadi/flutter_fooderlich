@@ -15,60 +15,60 @@ class Card1 extends StatelessWidget {
     return Center(
       child: Container(
         child: Stack(
-                children: [
-                  // 8
-                  Text(
-                    category,
-                    style: FooderlichTheme.darkTextTheme.bodyText1,
-                  ),
-                  // 9
-                  Positioned(
-                    child: Text(
-                        title,
-                        style: FooderlichTheme.darkTextTheme.headline2,
-                    ),
-                    top: 20,
-                  ),
-                  // 10
-                  Positioned(
-                    child: Text(
-                      description,
-                      style: FooderlichTheme.darkTextTheme.bodyText1,
-                      ),
-                    bottom: 30,
-                    right: 0,
-                  ),
-                  // 11
-                  Positioned(
-                    child: Text(
-                      chef,
-                      style: FooderlichTheme.darkTextTheme.bodyText1,
-                      ),
-                    bottom: 10,
-                    right: 0,
-                  )
-                ],
+          children: [
+            // 8
+            Text(
+              category,
+              style: FooderlichTheme.darkTextTheme.bodyText1,
+            ),
+            // 9
+            Positioned(
+              child: Text(
+                title,
+                style: FooderlichTheme.darkTextTheme.headline2,
               ),
-                // 1
-                padding: const EdgeInsets.all(16),
-                // 2
-                constraints: const BoxConstraints.expand(
-                  width: 370,
-                  height: 500,
-                ),
-                // 3
-                decoration: const BoxDecoration(
-                // 4
-                image: DecorationImage(
-                  // 5
-                  image: AssetImage('assets/mag1.png'),
-                  // 6
-                  fit: BoxFit.cover,
-                ),
-                // 7
-                borderRadius: BorderRadius.all(Radius.circular(16.0)),
-                ),
+              top: 20,
+            ),
+            // 10
+            Positioned(
+              child: Text(
+                description,
+                style: FooderlichTheme.darkTextTheme.bodyText1,
+              ),
+              bottom: 30,
+              right: 0,
+            ),
+            // 11
+            Positioned(
+              child: Text(
+                chef,
+                style: FooderlichTheme.darkTextTheme.bodyText1,
+              ),
+              bottom: 10,
+              right: 0,
+            )
+          ],
+        ),
+        // 1
+        padding: const EdgeInsets.all(16),
+        // 2
+        constraints: const BoxConstraints.expand(
+          width: 370,
+          height: 500,
+        ),
+        // 3
+        decoration: const BoxDecoration(
+          // 4
+          image: DecorationImage(
+            // 5
+            image: AssetImage('assets/mag1.png'),
+            // 6
+            fit: BoxFit.cover,
           ),
+          // 7
+          borderRadius: BorderRadius.all(Radius.circular(16.0)),
+        ),
+      ),
     );
   }
 }

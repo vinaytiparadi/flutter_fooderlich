@@ -9,6 +9,7 @@ class Home extends StatefulWidget {
   @override
   _HomeState createState() => _HomeState();
 }
+
 class _HomeState extends State<Home> {
   // 7
   int _selectedIndex = 0;
@@ -24,6 +25,7 @@ class _HomeState extends State<Home> {
       _selectedIndex = index;
     });
   }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -39,8 +41,7 @@ class _HomeState extends State<Home> {
       // 4
       bottomNavigationBar: BottomNavigationBar(
         // 5
-        selectedItemColor:
-        Theme.of(context).textSelectionTheme.selectionColor,
+        selectedItemColor: Theme.of(context).textSelectionTheme.selectionColor,
         // 10
         currentIndex: _selectedIndex,
         // 11
